@@ -13,42 +13,16 @@
 
         <!-- Partners Grid -->
         <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4 lg:gap-8 reveal">
-            <!-- ZTE -->
-            <div class="group h-32 flex items-center justify-center p-8 rounded-2xl bg-white border border-navy-100 shadow-sm hover:border-gold-400 hover:shadow-lg transition-all duration-500">
-                <span class="text-2xl font-black text-[#00b4ff] group-hover:scale-110 transition-transform tracking-tighter">ZTE</span>
-            </div>
-            <!-- HUAWEI -->
-            <div class="group h-32 flex items-center justify-center p-8 rounded-2xl bg-white border border-navy-100 shadow-sm hover:border-gold-400 hover:shadow-lg transition-all duration-500">
-                <div class="flex items-center gap-2">
-                    <div class="w-6 h-6 bg-[#ed1c24] rounded-full flex items-center justify-center">
-                         <span class="text-[8px] text-white font-bold">H</span>
-                    </div>
-                    <span class="text-xl font-black text-[#1a1a1a] group-hover:scale-110 transition-transform tracking-tighter uppercase">Huawei</span>
+            <!-- Dynamic Partners (Dari Database Admin) -->
+            @foreach($partners as $partner)
+                <div class="group h-32 flex items-center justify-center p-8 rounded-2xl bg-white border border-navy-100 shadow-sm hover:border-gold-400 hover:shadow-lg transition-all duration-500 relative">
+                    @if($partner->link)
+                        <a href="{{ $partner->link }}" target="_blank" class="absolute inset-0 z-10"></a>
+                    @endif
+                    <img src="{{ asset('storage/' . $partner->logo) }}" alt="{{ $partner->name }}" class="max-w-full max-h-full object-contain group-hover:scale-110 transition-transform duration-500 grayscale group-hover:grayscale-0 opacity-60 group-hover:opacity-100">
                 </div>
-            </div>
-            <!-- PT.YPTT -->
-            <div class="group h-32 flex items-center justify-center p-8 rounded-2xl bg-white border border-navy-100 shadow-sm hover:border-gold-400 hover:shadow-lg transition-all duration-500">
-                <div class="text-center group-hover:scale-110 transition-transform">
-                    <span class="block text-lg font-black text-[#0050a0] leading-none">PT. YPTT</span>
-                    <span class="block text-[10px] font-bold text-[#4d4d4d] uppercase mt-1">Solutions Indonesia</span>
-                </div>
-            </div>
-            <!-- TELKOMSEL -->
-            <div class="group h-32 flex items-center justify-center p-8 rounded-2xl bg-white border border-navy-100 shadow-sm hover:border-gold-400 hover:shadow-lg transition-all duration-500">
-                <span class="text-xl font-black text-[#ed1c24] group-hover:scale-110 transition-transform uppercase tracking-tight">Telkomsel</span>
-            </div>
-            <!-- TELKOMINFRA -->
-            <div class="group h-32 flex items-center justify-center p-8 rounded-2xl bg-white border border-navy-100 shadow-sm hover:border-gold-400 hover:shadow-lg transition-all duration-500">
-                <span class="text-xl font-black text-[#1a1a1a] group-hover:scale-110 transition-transform uppercase tracking-tight">Telkominfra</span>
-            </div>
-            <!-- XLSMART -->
-            <div class="group h-32 flex items-center justify-center p-8 rounded-2xl bg-white border border-navy-100 shadow-sm hover:border-gold-400 hover:shadow-lg transition-all duration-500">
-                <span class="text-2xl font-black text-[#2e3192] group-hover:scale-110 transition-transform italic tracking-tighter">XL<span class="text-[#f7941d]">SMART</span></span>
-            </div>
-            <!-- INDOSAT -->
-            <div class="group h-32 flex items-center justify-center p-8 rounded-2xl bg-white border border-navy-100 shadow-sm hover:border-gold-400 hover:shadow-lg transition-all duration-500">
-                <span class="text-2xl font-black text-[#1a1a1a] group-hover:scale-110 transition-transform tracking-tight">INDOSAT</span>
-            </div>
+            @endforeach
+
             <!-- And More -->
             <div class="group h-32 flex items-center justify-center p-8 rounded-2xl bg-navy-50/50 border border-dashed border-navy-200 hover:bg-navy-100 transition-all">
                 <span class="text-xs font-bold text-navy-600 uppercase tracking-widest">And More</span>
@@ -56,3 +30,4 @@
         </div>
     </div>
 </section>
+

@@ -10,7 +10,7 @@
         <!-- Section Header -->
         <div class="text-center mb-16 reveal">
             <span class="inline-block px-4 py-1.5 rounded-full bg-gold-500/10 border border-gold-500/20 text-gold-400 text-xs font-semibold uppercase tracking-widest mb-4">Komitmen Keselamatan</span>
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white">Safety <span class="gold-text">Standards</span></h2>
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white">Standar <span class="gold-text">Keselamatan (K3)</span></h2>
             <p class="text-white/50 mt-4 max-w-2xl mx-auto">Keselamatan kerja adalah prioritas utama kami dalam setiap tahap implementasi proyek di lapangan.</p>
             <div class="gold-line w-20 mx-auto mt-6"></div>
         </div>
@@ -27,7 +27,7 @@
                     Kami menerapkan prosedur keselamatan dan kesehatan kerja secara ketat disetiap lini operasional untuk melindungi seluruh personil.
                 </p>
                 <div class="mt-6 flex items-center text-gold-400 text-xs font-bold tracking-widest uppercase opacity-0 group-hover:opacity-100 transition-opacity">
-                    Compliance Verified
+                    Kepatuhan Terverifikasi
                 </div>
             </div>
 
@@ -36,12 +36,12 @@
                 <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center mb-6 shadow-lg shadow-gold-500/20 group-hover:scale-110 transition-transform">
                     <svg class="w-8 h-8 text-navy-950" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
                 </div>
-                <h3 class="text-xl font-bold text-white mb-4">Work at Height Safety</h3>
+                <h3 class="text-xl font-bold text-white mb-4">Keselamatan Kerja di Ketinggian</h3>
                 <p class="text-white/50 text-sm leading-relaxed">
                     Setiap aktivitas di ketinggian menggunakan peralatan pelindung diri berstandar tinggi guna menjamin keamanan teknisi selama bekerja.
                 </p>
                 <div class="mt-6 flex items-center text-gold-400 text-xs font-bold tracking-widest uppercase opacity-0 group-hover:opacity-100 transition-opacity">
-                    Certified Climbers
+                    Pemanjat Bersertifikasi
                 </div>
             </div>
 
@@ -50,12 +50,12 @@
                 <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center mb-6 shadow-lg shadow-gold-500/20 group-hover:scale-110 transition-transform">
                     <svg class="w-8 h-8 text-navy-950" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
                 </div>
-                <h3 class="text-xl font-bold text-white mb-4">Daily Toolbox Meeting</h3>
+                <h3 class="text-xl font-bold text-white mb-4">Pertemuan Keselamatan Harian</h3>
                 <p class="text-white/50 text-sm leading-relaxed">
                     Pertemuan harian dilakukan sebelum memulai pekerjaan untuk memastikan kesiapan alat dan pemahaman mendalam mengenai prosedur kerja yang aman.
                 </p>
                 <div class="mt-6 flex items-center text-gold-400 text-xs font-bold tracking-widest uppercase opacity-0 group-hover:opacity-100 transition-opacity">
-                    Daily Discipline
+                    Disiplin Harian
                 </div>
             </div>
         </div>

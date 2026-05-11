@@ -1,193 +1,70 @@
 {{-- ============================================ --}}
-{{-- SECTION: PORTFOLIO (PROJECTS) --}}
+{{-- SECTION 4: PORTFOLIO (Dynamic Text-Based) --}}
 {{-- ============================================ --}}
-<section id="portfolio" class="relative py-24 lg:py-32 bg-navy-950 overflow-hidden">
-    <!-- Decorative background elements -->
-    <div class="absolute top-0 right-0 w-1/3 h-full bg-navy-900/50 -skew-x-12 translate-x-1/3"></div>
-    <div class="absolute bottom-0 left-0 w-72 h-72 bg-gold-500/5 rounded-full blur-3xl"></div>
+<section id="portfolio" class="relative py-24 lg:py-32 bg-[#050b14] overflow-hidden">
+    <!-- Background Decor -->
+    <div class="absolute top-0 right-0 w-1/3 h-full bg-navy-900/20 skew-x-12 transform translate-x-1/2"></div>
+    <div class="absolute bottom-20 left-10 w-72 h-72 bg-gold-500/5 rounded-full blur-3xl"></div>
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <!-- Section Header -->
-        <div class="text-center mb-20 reveal">
+        <div class="mb-20 reveal">
             <span class="inline-block px-4 py-1.5 rounded-full bg-gold-500/10 border border-gold-500/20 text-gold-400 text-xs font-semibold uppercase tracking-widest mb-4">Pengalaman Kerja</span>
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white">Our <span class="gold-text">Portfolio</span></h2>
-            <p class="text-white/50 mt-4 max-w-2xl mx-auto">Rekam jejak keberhasilan kami dalam mengelola berbagai proyek infrastruktur telekomunikasi strategis di Indonesia.</p>
-            <div class="gold-line w-20 mx-auto mt-6"></div>
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white">Project <span class="gold-text">Portfolio</span></h2>
+            <p class="text-white/40 mt-4 max-w-2xl leading-relaxed italic">"Our track record of excellence in delivering mission-critical telecommunications infrastructure."</p>
+            <div class="gold-line w-20 mt-6"></div>
         </div>
 
-        <div class="space-y-16">
-            <!-- 1. ZTE PROJECTS -->
+        <div class="space-y-20">
+            @forelse($portfolioGroups as $group)
             <div class="reveal">
-                <div class="flex items-center gap-4 mb-6">
-                    <div class="h-10 w-1 bg-gold-500"></div>
-                    <h3 class="text-2xl font-black text-white tracking-tight uppercase">ZTE <span class="text-gold-400">Projects</span></h3>
+                <!-- Group Title with Orange Vertical Line -->
+                <div class="flex items-center gap-4 mb-8">
+                    <div class="w-1.5 h-10 bg-gradient-to-b from-gold-400 to-gold-600 rounded-full shadow-lg shadow-gold-500/20"></div>
+                    <h3 class="text-2xl font-black text-white uppercase tracking-wider tracking-widest">
+                        {{ $group->name }}
+                    </h3>
                 </div>
-                <div class="overflow-hidden rounded-2xl border border-white/10 shadow-2xl bg-white/5 backdrop-blur-sm">
-                    <table class="w-full text-left border-collapse">
-                        <thead>
-                            <tr class="bg-white/10">
-                                <th class="px-6 py-4 text-sm font-bold text-gold-400 uppercase tracking-wider border-b border-white/10 w-1/3">Project Name</th>
-                                <th class="px-6 py-4 text-sm font-bold text-gold-400 uppercase tracking-wider border-b border-white/10 w-2/3">Scope of Work</th>
-                            </tr>
-                        </thead>
-                        <tbody class="text-white/80">
-                            <tr class="hover:bg-white/5 transition-colors">
-                                <td class="px-6 py-4 border-b border-white/5 text-sm">
-                                    <ul class="space-y-2 list-disc list-inside">
-                                        <li>XLSMART SWAP MOCN (2025/2026)</li>
-                                        <li>Telkomsel Trust Kalimantan</li>
-                                        <li>IOH MW Access & HICAP</li>
-                                        <li>Smartfren Swap Modernization BBU</li>
-                                        <li>Smartfren New Infill & Swap Site Optimization</li>
-                                    </ul>
-                                </td>
-                                <td class="px-6 py-4 border-b border-white/5 text-sm">
-                                    <ul class="space-y-2">
-                                        <li class="flex items-start gap-2">
-                                            <span class="text-gold-500 mt-1.5">•</span>
-                                            <span>Survey TSS & LOS</span>
-                                        </li>
-                                        <li class="flex items-start gap-2">
-                                            <span class="text-gold-500 mt-1.5">•</span>
-                                            <span>Implementasi & dismantling jaringan (swap, upgrade, 5G)</span>
-                                        </li>
-                                        <li class="flex items-start gap-2">
-                                            <span class="text-gold-500 mt-1.5">•</span>
-                                            <span>Instalasi MW/HICAP</span>
-                                        </li>
-                                        <li class="flex items-start gap-2">
-                                            <span class="text-gold-500 mt-1.5">•</span>
-                                            <span>Optimasi jaringan & audit RF</span>
-                                        </li>
-                                    </ul>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
 
-            <!-- 2. HUAWEI PROJECTS -->
-            <div class="reveal">
-                <div class="flex items-center gap-4 mb-6">
-                    <div class="h-10 w-1 bg-gold-500"></div>
-                    <h3 class="text-2xl font-black text-white tracking-tight uppercase">Huawei <span class="text-gold-400">Projects</span></h3>
-                </div>
-                <div class="overflow-hidden rounded-2xl border border-white/10 shadow-2xl bg-white/5 backdrop-blur-sm">
-                    <table class="w-full text-left border-collapse">
+                <!-- Projects Table -->
+                <div class="overflow-hidden rounded-2xl border border-white/5 bg-white/[0.02] backdrop-blur-sm shadow-2xl">
+                    <table class="w-full text-left">
                         <thead>
-                            <tr class="bg-white/10">
-                                <th class="px-6 py-4 text-sm font-bold text-gold-400 uppercase tracking-wider border-b border-white/10 w-1/2">Project Name</th>
-                                <th class="px-6 py-4 text-sm font-bold text-gold-400 uppercase tracking-wider border-b border-white/10 w-1/2">Scope of Work</th>
+                            <tr class="border-b border-white/10 bg-white/[0.03]">
+                                <th class="px-6 py-5 text-[11px] font-black uppercase text-gold-400 tracking-[0.2em] w-1/3">Project Name</th>
+                                <th class="px-6 py-5 text-[11px] font-black uppercase text-gold-400 tracking-[0.2em]">Scope of Work</th>
                             </tr>
                         </thead>
-                        <tbody class="text-white/80">
-                            <tr class="hover:bg-white/5 transition-colors">
-                                <td class="px-6 py-4 border-b border-white/5 text-sm">
-                                    <ul class="space-y-2 list-disc list-inside">
-                                        <li>Swap MOCN Huawei IOH</li>
-                                        <li>Swap MOCN Huawei XLSMART</li>
-                                    </ul>
+                        <tbody class="divide-y divide-white/5">
+                            @foreach($group->items as $item)
+                            <tr class="hover:bg-white/[0.02] transition-colors group">
+                                <td class="px-6 py-6 align-top">
+                                    <div class="flex items-start gap-3">
+                                        <div class="mt-1.5 w-1.5 h-1.5 rounded-full bg-gold-500 opacity-50 group-hover:opacity-100 transition-opacity"></div>
+                                        <p class="text-sm font-bold text-white/90 group-hover:text-white transition-colors leading-tight">
+                                            {{ $item->project_name }}
+                                        </p>
+                                    </div>
                                 </td>
-                                <td class="px-6 py-4 border-b border-white/5 text-sm">
-                                    <ul class="space-y-2">
-                                        <li class="flex items-start gap-2">
-                                            <span class="text-gold-500 mt-1.5">•</span>
-                                            <span>Survey & analisis LOS</span>
-                                        </li>
-                                        <li class="flex items-start gap-2">
-                                            <span class="text-gold-500 mt-1.5">•</span>
-                                            <span>Implementasi & dismantling</span>
-                                        </li>
-                                        <li class="flex items-start gap-2">
-                                            <span class="text-gold-500 mt-1.5">•</span>
-                                            <span>Upgrade PLN</span>
-                                        </li>
-                                    </ul>
+                                <td class="px-6 py-6 align-top">
+                                    <p class="text-sm text-white/40 group-hover:text-white/60 transition-colors leading-relaxed">
+                                        {{ $item->scope_of_work }}
+                                    </p>
                                 </td>
                             </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>
             </div>
-
-            <!-- 3. TELKOMINFRA PROJECTS -->
-            <div class="reveal">
-                <div class="flex items-center gap-4 mb-6">
-                    <div class="h-10 w-1 bg-gold-500"></div>
-                    <h3 class="text-2xl font-black text-white tracking-tight uppercase">Telkominfra <span class="text-gold-400">Projects</span></h3>
+            @empty
+            <div class="py-20 text-center border-2 border-dashed border-white/5 rounded-[2.5rem]">
+                <div class="w-20 h-20 bg-white/5 rounded-full flex items-center justify-center mx-auto mb-6 text-white/10">
+                    <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
                 </div>
-                <div class="overflow-hidden rounded-2xl border border-white/10 shadow-2xl bg-white/5 backdrop-blur-sm">
-                    <table class="w-full text-left border-collapse">
-                        <thead>
-                            <tr class="bg-white/10">
-                                <th class="px-6 py-4 text-sm font-bold text-gold-400 uppercase tracking-wider border-b border-white/10 w-1/2">Project Name</th>
-                                <th class="px-6 py-4 text-sm font-bold text-gold-400 uppercase tracking-wider border-b border-white/10 w-1/2">Scope of Work</th>
-                            </tr>
-                        </thead>
-                        <tbody class="text-white/80">
-                            <tr class="hover:bg-white/5 transition-colors">
-                                <td class="px-6 py-4 border-b border-white/5 text-sm">
-                                    <ul class="space-y-2 list-disc list-inside">
-                                        <li>Re-engineering Telkomsel</li>
-                                    </ul>
-                                </td>
-                                <td class="px-6 py-4 border-b border-white/5 text-sm">
-                                    <ul class="space-y-2">
-                                        <li class="flex items-start gap-2">
-                                            <span class="text-gold-500 mt-1.5">•</span>
-                                            <span>Antena leveling</span>
-                                        </li>
-                                        <li class="flex items-start gap-2">
-                                            <span class="text-gold-500 mt-1.5">•</span>
-                                            <span>Modernisasi antenna/RRU</span>
-                                        </li>
-                                        <li class="flex items-start gap-2">
-                                            <span class="text-gold-500 mt-1.5">•</span>
-                                            <span>Relokasi & optimasi site</span>
-                                        </li>
-                                    </ul>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+                <p class="text-white/20 font-black uppercase tracking-[0.2em] text-sm">Portfolio data is currently being updated</p>
             </div>
-
-            <!-- 4. PLN PROJECTS -->
-            <div class="reveal">
-                <div class="flex items-center gap-4 mb-6">
-                    <div class="h-10 w-1 bg-gold-500"></div>
-                    <h3 class="text-2xl font-black text-white tracking-tight uppercase">PLN <span class="text-gold-400">Projects</span></h3>
-                </div>
-                <div class="overflow-hidden rounded-2xl border border-white/10 shadow-2xl bg-white/5 backdrop-blur-sm">
-                    <table class="w-full text-left border-collapse">
-                        <thead>
-                            <tr class="bg-white/10">
-                                <th class="px-6 py-4 text-sm font-bold text-gold-400 uppercase tracking-wider border-b border-white/10 w-1/2">Project Name</th>
-                                <th class="px-6 py-4 text-sm font-bold text-gold-400 uppercase tracking-wider border-b border-white/10 w-1/2">Scope of Work</th>
-                            </tr>
-                        </thead>
-                        <tbody class="text-white/80">
-                            <tr class="hover:bg-white/5 transition-colors">
-                                <td class="px-6 py-4 border-b border-white/5 text-sm">
-                                    <ul class="space-y-2 list-disc list-inside">
-                                        <li>PLN AMI Swap Modernization</li>
-                                    </ul>
-                                </td>
-                                <td class="px-6 py-4 border-b border-white/5 text-sm">
-                                    <ul class="space-y-2">
-                                        <li class="flex items-start gap-2">
-                                            <span class="text-gold-500 mt-1.5">•</span>
-                                            <span>Upgrade & modernisasi sistem AMI</span>
-                                        </li>
-                                    </ul>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+            @endforelse
         </div>
     </div>
 </section>

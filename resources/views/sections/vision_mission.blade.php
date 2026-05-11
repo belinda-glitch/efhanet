@@ -10,7 +10,7 @@
         <!-- Section Header -->
         <div class="text-center mb-16 reveal">
             <span class="inline-block px-4 py-1.5 rounded-full bg-navy-100 text-navy-600 text-xs font-semibold uppercase tracking-widest mb-4">Filosofi Perusahaan</span>
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-navy-900">Vision & <span class="gold-text">Mission</span></h2>
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-navy-900">Visi & <span class="gold-text">Misi</span></h2>
             <div class="gold-line w-20 mx-auto mt-6"></div>
         </div>
 
@@ -25,7 +25,7 @@
                     <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center mb-8 shadow-lg shadow-gold-500/20 group-hover:scale-110 transition-transform">
                         <svg class="w-8 h-8 text-navy-950" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
                     </div>
-                    <h3 class="text-3xl font-black text-navy-900 mb-6">Our <span class="text-gold-500">Vision</span></h3>
+                    <h3 class="text-3xl font-black text-navy-900 mb-6">Visi <span class="text-gold-500">Kami</span></h3>
                     <p class="text-lg text-navy-600/80 leading-relaxed font-medium">
                         Menjadi mitra infrastruktur telekomunikasi terdepan yang menyediakan solusi berkualitas tinggi guna mendukung konektivitas digital berkelanjutan.
                     </p>
@@ -43,7 +43,7 @@
                     <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center mb-8 shadow-lg shadow-gold-500/20 group-hover:scale-110 transition-transform">
                         <svg class="w-8 h-8 text-navy-950" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
                     </div>
-                    <h3 class="text-3xl font-black text-white mb-6">Our <span class="text-gold-500">Mission</span></h3>
+                    <h3 class="text-3xl font-black text-white mb-6">Misi <span class="text-gold-500">Kami</span></h3>
                     <div class="space-y-4 text-white/70 leading-relaxed">
                         <p>Menyediakan solusi instalasi telekomunikasi yang inovatif, efisien, dan adaftif terhadap kebutuhan pelanggan.</p>
                         <p>Menjamin keselamatan kerja (K3) dan kualitas hasil sesuai standar operator nasional.</p>
